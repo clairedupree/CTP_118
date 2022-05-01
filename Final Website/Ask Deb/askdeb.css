@@ -6,7 +6,7 @@ header, nav, main, footer {
 
 body { 
 	background-color: #9c528b;
-  color: #2f0147;
+  /*color: #2f0147;*/
 	font-family: Verdana, Arial, sans-serif;
 	background-image: url(images/background.png);
 }
@@ -33,9 +33,9 @@ nav {
 	padding: 1em;
 	background-color: #e2c2c6;
 	float: left;
-	width: 180px;
+	/*width: 180px;*/
 	text-align: center;
-
+	overflow: auto;
 }
 
 nav ul { 
@@ -45,8 +45,17 @@ nav ul {
 }
 
 nav li { 
-	display: inline-block;  
+	display: block;  
 	padding: 1em;
+	margin: .5em 0 .5em 0;
+	background-color: #b28d99;
+	border-radius: 25px;
+	width: 150px;
+}
+
+nav li:hover {
+	background-color: #9c528b;
+	color: #ffffff;
 }
 
 nav a { 
@@ -55,16 +64,19 @@ nav a {
 }
 
 nav a:link { 
-	color: #FFFFFF; 
+	color: #ffffff; 
 }
 
+
 nav a:visited { 
-	color: #C2E0F0; 
+	color: #ffffff; 
 }
+/*
 
 nav a:hover { 
 	color: #CCCCCC; 
 }
+*/
 
 h2 { 
 	color: #3399CC;
@@ -80,29 +92,55 @@ dt {
 	font-weight: bold; 
 }
 
+/*
 .resort { 
 	color: #000033;
 	font-size: 1.2em;
 }
+*/
 
 footer { 
-	font-size: .70em;
+	font-size: .75em;
 	font-style: italic;
 	text-align: center; 
 	padding: 1em;
 	background-color: #b28d99;
 	border-top: 3px solid #e2c2c6;
 	margin: 0;
+	overflow: auto;
+}
+
+footer a:link {
+	text-decoration: none;
+	color:#e2c2c6;
+}
+
+footer a:hover {
+	color:#610f7f;
+}
+
+footer a:visited {
+	color:#e2c2c6;
 }
 
 main { 
-	padding-left: 2em;
-	padding-right: 2em;
-	padding-bottom: 1px;
-	padding-top: 1em;
+	padding: 1em 2em 1px 2em;
 	background-color: #FFFFFF;
 	margin-left: 180px;
 	display: block;
+}
+
+#footerLeft {
+	margin-top: .5em;
+	float: left;
+	width: 50%;
+	/*overflow: auto;*/
+}
+
+#footerRight {
+	float: right;
+	width: 50%;
+	/*overflow: auto;*/
 }
 
 /*
@@ -192,10 +230,12 @@ input, textarea {
 	margin-left: 10em; 
 }	
 
+/*
 video, embed { 
 	float: right; 
 	margin:2em; 
 }	 
+*/
 
 .leftfloat { 
 	float: left;
@@ -212,7 +252,9 @@ video, embed {
 	body { 
 		margin: 0;
 		padding: 0;
+		/*
 		background-image: none; 
+		*/
 		}
 
 	#wrapper { 
@@ -229,16 +271,18 @@ video, embed {
 	nav { 
 		float: none;
 		width: auto;
-		padding: 0.1em 1em;
+		padding: .5em;
+		/*
 		background-color: #124373;
+		*/
 	}
 
 	nav li { 
-		display: inline-block;  
+		display: inline-block; 
 	}
 
 	nav a { 
-		padding-right: 2em; 
+		padding-right: 1em; 
 	}
 
 	main { 
@@ -266,15 +310,18 @@ video, embed {
 	}
 
 	nav { 
-		padding: 0; 
+		padding: 0;
+		border-bottom: 3px solid #e2c2c6; 
+
 	}
 
 	nav a { 
 		display: block; 
-		padding: 0.2em;
+		padding: 0em;
 		font-size: 1.1em;
-		border-bottom: 1px solid #330000; 
+		line-height: 150%;
 	}
+
 
 	nav ul { 
 		padding: 0;
@@ -283,6 +330,10 @@ video, embed {
 
 	nav li { 
 		display: block; 
+		width: auto;
+		border-radius: 0px;
+		background-color: #b28d99;
+		color: #ffffff;
 		margin: 0;
 		padding: 0; 
 	}
