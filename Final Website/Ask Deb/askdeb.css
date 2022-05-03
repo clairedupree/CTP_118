@@ -110,28 +110,46 @@ footer {
 	overflow: auto;
 }
 
+footer ul {
+	list-style-type: none;
+	padding: 1em;
+	margin: 0;
+}
+
+footer li {
+	display: inline;
+	padding-right: 20px;
+}
+
+footer a:visited {
+	color: #ffffff;
+}
+
 footer a:link {
-	text-decoration: none;
-	color:#e2c2c6;
+	/*text-decoration: none;*/
+	color:#ffffff;
 }
 
 footer a:hover {
 	color:#610f7f;
 }
 
-footer a:visited {
-	color:#e2c2c6;
+footer a:active {
+	color:#610f7f;
 }
 
 main { 
-	padding: 1em 2em 1px 2em;
+	padding: 1em 2em 0 2em;
 	background-color: #FFFFFF;
 	margin-left: 180px;
 	display: block;
+	overflow: auto;
+	position: relative; /*MIGHT NEED 2 CHANGE BACK / separate out main*/
+	min-height: 420px;
 }
 
 #footerLeft {
-	margin-top: .5em;
+	/*margin-top: .5em;*/
 	float: left;
 	width: 50%;
 	/*overflow: auto;*/
@@ -178,17 +196,17 @@ main {
 	min-width: 700px;
 	max-width: 1024px;
 	/*box-shadow: 3px 3px 3px #000033;*/
-	border: 3px solid #e2c2c6
+	border: 3px solid #e2c2c6;
 }
 
 #mobile { 
 	display: none; 
 }
-
+/* investigate use of this */
 #desktop { 
 	display: inline; 
 }
-
+ /*
 table { 
 	margin-left: auto;
 	margin-right: auto;
@@ -225,11 +243,12 @@ input, textarea {
 	display: block; 
 	margin-bottom: 1em;
 }
-
+*/
+/*
 #mySubmit { 
 	margin-left: 10em; 
 }	
-
+*/
 /*
 video, embed { 
 	float: right; 
@@ -246,7 +265,25 @@ video, embed {
 	clear: both; 
 }
 
-/* Medium Resolutions - Tablets */
+.rightmost {
+	padding-right: 0;
+}
+
+.leftColumn {
+	float: left;
+	width: 50%;
+}
+
+.rightColumn {
+	float: right;
+	width: 50%;
+	position: absolute;
+	bottom: 0px;
+	right: 10px;
+	/*	may need to fix base height of main, since this div position is fixed, minimum height should be the div size*/
+}
+
+/* Medium Resolution - Tablets */
 @media only screen and (max-width: 1024px) {
 
 	body { 
@@ -271,10 +308,8 @@ video, embed {
 	nav { 
 		float: none;
 		width: auto;
-		padding: .5em;
-		/*
-		background-color: #124373;
-		*/
+		padding: 0; /*or .5em if feels too crowded*/
+		/*background-color: #124373;*/
 	}
 
 	nav li { 
@@ -286,21 +321,30 @@ video, embed {
 	}
 
 	main { 
-		padding: 1em; 
+		padding: 1em 1em 0 1em; 
 		margin-left: 0; 
 		font-size: 90%; 
+		/*position: static;*/
+		min-height: none;
 	}
 
 	footer { 
 		margin: 0; 
 	}
-
+/*
 	#homehero, #yurthero, #trailhero { 
 		margin-left: 0; 
 	}
+	*/
+
+	.rightColumn {
+		/*position: relative;
+		*/bottom: 0px;
+		right: 0px;
+	}
 }
 
-
+/* Small Resolution - Mobile */
 @media only all and (max-width: 768px) {
 
 	h1 { 
@@ -332,10 +376,42 @@ video, embed {
 		display: block; 
 		width: auto;
 		border-radius: 0px;
+		border: .5px solid #e2c2c6;
 		background-color: #b28d99;
 		color: #ffffff;
 		margin: 0;
 		padding: 0; 
+	}
+
+	.leftColumn {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+	
+	.rightColumn {
+		float: none;
+		width: 100%;
+		position: relative;
+	}
+
+	footer { 
+		font-size: .75em;
+	}
+	
+	footer ul {
+		padding-top: 0;
+	}
+
+	#footerLeft {
+		/*margin-top: .5em;*/
+		float: none;
+		width: 100%;
+	}
+	
+	#footerRight {
+		float: none;
+		width: 100%;
 	}
 
 	main { 
