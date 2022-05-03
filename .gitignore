@@ -9,5 +9,8 @@
 *.class
 *.pptx
 *.ini
+Module*
+Source Code*
+Final Website/Pacific Trails/*
 
 Example Programs
