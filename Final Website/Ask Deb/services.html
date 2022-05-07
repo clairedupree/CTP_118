@@ -31,9 +31,128 @@
       <main>
         <h2>Services</h2>
 
-        At least one unordered / ordered list. Clearly displayed and not used for links.
-        <br>A Form to request information from the visitor.
-        
+        <div id="covidAlert" class="alert">
+          <span><img style="float: left; margin: 6px" height="25" src="images/alert.png" alt="Important!"></span>Due to COVID-19, we are currently only offering virtual services at this time. 
+            Thank you for your understanding.
+        </div>
+
+        <div id="services">
+          <ul style="text-align: left">
+            <li>General Advice</li>
+              <li class="sublist">Via email, $20 - $50, price determined at time of service</li>
+            <li>Relationship Counseling</li>
+              <li class="sublist">For individuals: $80 per 45m session
+              <li class="sublist">For couples: $190 per 45m session</li>
+            <li>Sign up for speed-dating</li>
+              <li class="sublist">Currently being offered via Zoom</li>          
+          </ul>
+          
+          <p style="font-size: small"><em>For those in need, Deb offers a sliding pay scale for all individual services. 
+            (Not offered for couples services.)</em></p>
+        </div>
+
+        <form>
+          <div>
+            <h3>Submit a Request</h3>
+              
+            <div class="form-group">
+              <label for="services" class="requiredField">*</label>
+                <select style="font-size: 100%" name="services" id="services" required>
+                  <option value="" selected>Please select the service you are requesting</option>
+                  <option value="advice email">General Advice</option>
+                  <option value="advice email">Individual Relationship Counseling</option>
+                  <option value="advice email">Couples Relationship Counseling</option>
+                  <option value="advice email">Speed-Dating Registration</option>
+                </select><br>
+            </div>
+
+            <div class="form-group">
+              <label for="customerFirstName">First Name: <span class="requiredField">*</span></label>
+                <input type="text" id="customerFirstName" required>
+            </div>
+
+            <div class="form-group">
+              <label for="customerLastName">Last Name: <span class="requiredField">*</span></label>
+                <input type="text" id="customerLastName" required>
+            </div>
+
+            <div class="form-group">
+              <label for="customerEmail">Email: <span class="requiredField">*</span></label>
+                <input type="email" id="customerEmail" required>&nbsp;&nbsp;
+            </div>
+
+            <div class="form-group">
+              <label for="customerPhone">Phone: </label>
+                <input type="phone" id="customerPhone">
+            </div>
+            
+            <div class="form-group">
+              <label for="comments">Comments: </label><br>
+                <textarea style="margin-top: 5px" id="comments" name="comments" rows="3" cols="40"> 
+                </textarea>
+            </div>
+
+            <div class="form-group">
+              <div style="font-size: small">All fields marked with <span class="requiredField">*</span> are required
+            </div>
+
+              <div class="form-group">
+                <button type="submit" id="submitButton">Submit</button>
+            </div>
+
+          </div>
+        </form>
+
+        <!-- <form>
+          <div id="formContainer">
+            <h3 style="grid-row: 1/2; grid-column: 1/3">Submit a Request</h3>
+              
+            <div class="form-group" style="grid-row: 2/3; grid-column: 1/3">
+              <label for="services">Please select the service you are requesting: <span class="requiredField">*</span></label><br>
+                <select name="services" id="services" selected="" required>
+                  <option value="advice email">General Advice</option>
+                  <option value="advice email">Individual Relationship Counseling</option>
+                  <option value="advice email">Couples Relationship Counseling</option>
+                  <option value="advice email">Speed-Dating</option>
+                </select><br>
+            </div>
+
+            <div class="form-group" style="grid-row: 3/4; grid-column: 1/2">
+              <label for="customerFirstName">First Name: <span class="requiredField">*</span></label>
+                <input type="text" id="customerFirstName" required>
+            </div>
+
+            <div class="form-group" style="grid-row: 3/4; grid-column: 2/3">
+              <label for="customerLastName">Last Name: <span class="requiredField">*</span></label>
+                <input type="text" id="customerLastName" required>
+            </div>
+
+            <div class="form-group" style="grid-row: 4/5; grid-column: 1/2">
+              <label for="customerEmail">Email: <span class="requiredField">*</span></label>
+                <input type="email" id="customerEmail" required>
+            </div>
+
+            <div class="form-group" style="grid-row: 4/5; grid-column: 2/3">
+              <label for="customerPhone">Phone: </label>
+                <input type="phone" id="customerPhone">
+            </div>
+            
+            <div class="form-group" style="grid-row: 5/6; grid-column: 1/3; display: block">
+              <label for="comments">Comments: </label><br>
+                <textarea id="comments" name="comments" rows="3" cols="70"> 
+                </textarea>
+            </div>
+
+            <div class="form-group" style="grid-row: 7/8; grid-column: 1/3">
+              All fields marked with <span class="requiredField">*</span> are required.
+            </div>
+
+            <div class="form-group" style="grid-row: 8/9; grid-column: 1/3">
+              <button type="submit" id="submitButton">Submit</button>
+            </div>
+          </div>
+        </form> -->
+
       </main>
 
       <footer>
