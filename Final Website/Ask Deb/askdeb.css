@@ -28,6 +28,14 @@ h1 {
 	border-bottom: 3px solid #e2c2c6;
 }
 
+a {
+	color: #333333;
+}
+
+a:hover {
+	color:#9c528b;
+}
+
 nav { 
 	font-weight: bold;
 	padding: 1em;
@@ -79,12 +87,14 @@ nav a:hover {
 */
 
 h2 { 
-	color: #3399CC;
+	color: #610f7f;
 	font-family: Georgia, serif;
+	text-align: center;
 }
 
 h3 { 
-	color: #000033; 
+	color: #9c528b; 
+	margin-bottom: 5px;
 }
 
 dt { 
@@ -92,12 +102,6 @@ dt {
 	font-weight: bold; 
 }
 
-/*
-.resort { 
-	color: #000033;
-	font-size: 1.2em;
-}
-*/
 
 footer { 
 	font-size: .75em;
@@ -139,13 +143,19 @@ footer a:active {
 }
 
 main { 
-	padding: 1em 2em 0 2em;
+	padding: 1em 2em 1em 2em;
 	background-color: #FFFFFF;
 	margin-left: 180px;
-	display: block;
 	overflow: auto;
-	position: relative; /*MIGHT NEED 2 CHANGE BACK / separate out main*/
-	min-height: 420px;
+	text-align: center;
+}
+
+.homeMain {
+	text-align: left;
+	padding: 1em 2em 0 2em;
+	display: block;
+	position: relative;
+	min-height: 380px;
 }
 
 #footerLeft {
@@ -160,33 +170,6 @@ main {
 	width: 50%;
 	/*overflow: auto;*/
 }
-
-/*
-#homehero { 
-	height: 300px;
-	background-image: url(coast.jpg);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	margin-left: 170px;
-}
-
-#yurthero { 
-	height: 300px;
-	background-image: url(yurt.jpg);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	margin-left: 170px;
-}
-
-
-#trailhero { 
-	height: 300px;
-	background-image: url(trail.jpg);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	margin-left: 170px;
-}
-*/
 
 #wrapper { 
 	width: 80%;
@@ -277,6 +260,9 @@ video, embed {
 .rightColumn {
 	float: right;
 	width: 50%;
+}
+
+.floatBottom {
 	position: absolute;
 	bottom: 0px;
 	right: 10px;
@@ -319,25 +305,22 @@ video, embed {
 	nav a { 
 		padding-right: 1em; 
 	}
-
-	main { 
-		padding: 1em 1em 0 1em; 
+	
+	main {
+		padding: 1em 1em 1em 1em; 
+	}
+	
+	main, .homeMain { 
 		margin-left: 0; 
 		font-size: 90%; 
 		/*position: static;*/
-		min-height: none;
 	}
 
 	footer { 
 		margin: 0; 
 	}
-/*
-	#homehero, #yurthero, #trailhero { 
-		margin-left: 0; 
-	}
-	*/
 
-	.rightColumn {
+	.floatBottom {
 		/*position: relative;
 		*/bottom: 0px;
 		right: 0px;
@@ -346,6 +329,14 @@ video, embed {
 
 /* Small Resolution - Mobile */
 @media only all and (max-width: 768px) {
+
+	#mobile {
+		display: inline;
+	}
+	
+	#desktop {
+		display: none;
+	}
 
 	h1 { 
 		height: 120px;
@@ -403,6 +394,10 @@ video, embed {
 		padding-top: 0;
 	}
 
+	dd {
+		margin-left: 0;
+	}
+
 	#footerLeft {
 		/*margin-top: .5em;*/
 		float: none;
@@ -414,9 +409,9 @@ video, embed {
 		width: 100%;
 	}
 
-	main { 
+	/* main { 
 		padding: 0.1em 0.6em 0.1em 0.4em 
-	}
+	} */
 
 	#homehero, #yurthero, #trailhero { 
 		display: none; 
